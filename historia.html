@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ALLDAY LAB - Planos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #111;
+      color: #fff;
+      text-align: center;
+    }
+
+    header {
+      background-color: #1d1d1d;
+      padding: 30px 0;
+      text-align: center;
+    }
+
+    .logo {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    nav {
+      margin-top: 15px;
+    }
+
+    nav a {
+      color: #ccc;
+      margin: 0 15px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #f44336;
+    }
+
+    .planos-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 40px;
+    }
+
+    .plano-card {
+      background-color: #1d1d1d;
+      padding: 25px;
+      border-radius: 15px;
+      width: 280px;
+      transition: transform 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    }
+
+    .plano-card:hover {
+      transform: scale(1.05);
+    }
+
+    .plano-titulo {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      color: #ccc;
+    }
+
+    .plano-preco {
+      font-size: 2.2rem;
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+
+    .btn-comprar {
+      display: inline-block;
+      background-color: #f44336;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      padding: 10px 20px;
+      margin: 15px 0;
+      cursor: pointer;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .btn-comprar:hover {
+      background-color: #d32f2f;
+    }
+
+    .beneficios {
+      text-align: left;
+      margin-top: 10px;
+    }
+
+    .beneficio {
+      margin: 8px 0;
+      display: flex;
+      align-items: center;
+    }
+
+    .beneficio i {
+      margin-right: 10px;
+    }
+
+    .ativo {
+      color: #4caf50;
+    }
+
+    .inativo {
+      color: #f44336;
+      text-decoration: line-through;
+    }
+
+    footer {
+      background-color: #1d1d1d;
+      padding: 20px;
+      margin-top: 30px;
+    }
+
+    .logo-img {
+      margin-top: 30px;
+      max-width: 150px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">ALLDAY LAB</div>
+    <nav>
+      <a href="index.html"">Início</a>
+      <a href="historia.html">Planos</a>
+      <a href="sobre.html">Sobre Nós</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+  </header>
+
+  <div class="planos-container">
+    <!-- Plano BÁSICO -->
+    <div class="plano-card">
+      <div class="plano-titulo">BÁSICO</div>
+      <div class="plano-preco">R$ 99,90/mês</div>
+      <a href="pagamento.html" class="btn-comprar">COMECE HOJE</a>
+      <div class="beneficios">
+        <div class="beneficio ativo"><i class="fas fa-check"></i> Transformação Física Visível</div>
+        <div class="beneficio ativo"><i class="fas fa-check"></i> 2 aulas coletivas por semana</div>
+        <div class="beneficio ativo"><i class="fas fa-check"></i> Avaliação física inicial</div>
+        <div class="beneficio ativo"><i class="fas fa-check"></i> App básico de acompanhamento</div>
+        <div class="beneficio inativo"><i class="fas fa-times"></i> Acesso à área VIP</div>
+        <div class="beneficio inativo"><i class="fas fa-times"></i> 1 consulta nutricional mensal</div>
+        <div class="beneficio inativo"><i class="fas fa-times"></i> App premium com monitoramento</div>
+      </div>
+    </div>
+
+    <!-- Plano INTERMEDIÁRIO -->
+    <div class="plano-card">
+      <div class="plano-titulo">INTERMEDIÁRIO</div>
+      <div class="plano-preco">R$ 129,90/mês</div>
+      <a href="pagamento.html" class="btn-comprar">COMECE HOJE</a>
+      <div class="beneficios">
+        <div class="beneficio ativo"><i class="fas fa-check"></i> Todos os benefícios do básico +</div>
+        <div class="beneficio ativo"><i class="fas fa-check"></i> Acesso ilimitado a aulas coletivas</div>
+        <div class="beneficio ativo"><i class="fas fa-check"></i> Cadeira de massagem gratuita</div>
+        <div class="beneficio ativo"><i class="fas fa-check"></i> Programa de resultados garantidos</div>
+        <div class="beneficio ativo"><i class="fas fa-check"></i> Acesso prioritário a equipamentos</div>
+        <div class="beneficio inativo"><i class="fas fa-times"></i> Programa biométrico completo</div>
+        <div class="beneficio inativo"><i class="fas fa-times"></i> Nutricionista exclusivo</div>
+      </div>
+    </div>
+
+    <!-- Plano ALL DAY -->
+    <div class="plano-card">
+      <div class="plano-titulo">ALL DAY</div>
+      <div class="plano-preco">R$ 149,90/mês</div>
+      <a href="pagamento.html" class="btn-comprar">COMECE HOJE</a>
+      <div class="beneficios">
+        <div class="beneficio ativo"><i class="fas fa-check"></i> Todos os benefícios do Intermediário +</div>
+        <div class="beneficio ativo"><i class="fas fa-check"></i> Personal trainer 2x na semana</div>
+        <div class="beneficio ativo"><i class="fas fa-check"></i> Nutricionista exclusivo</div>
+        <div class="beneficio ativo"><i class="fas fa-check"></i> Acesso ilimitado a todas unidades</div>
+        <div class="beneficio ativo"><i class="fas fa-check"></i> Loja online com descontos</div>
+        <div class="beneficio ativo"><i class="fas fa-check"></i> Programa biométrico completo</div>
+        <div class="beneficio ativo"><i class="fas fa-check"></i> Lounge premium exclusivo</div>
+        <div class="beneficio ativo"><i class="fas fa-check"></i> Descontos em parceiros</div>
+      </div>
+    </div>
+  </div>
+
+  <head>
+
+    <img src="img/Logo.jpg.png" width="100" height="100" alt="Descrição" class="imagem-topo">
+</head>
+
+  <footer>
+    <p>&copy;2025 ALLDAY LAB</p>
+  </footer>
+</body>
+</html>

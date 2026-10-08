@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="img/apple-touch-icon.png" type="image/x-icon">
+  <title>Pagamento</title>
+  <style>
+    body {
+      background-color: #111;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    nav {
+      background-color: #1d1d1d;
+      padding: 20px 0;
+      text-align: center;
+      width: 100%;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      padding: 5px 10px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #f44336;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      width: 100%;
+    }
+
+    .pagamento-box {
+      background-color: #1d1d1d;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    h1 {
+      margin-bottom: 25px;
+      font-size: 24px;
+    }
+
+    input, button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 15px;
+      border: none;
+      border-radius: 8px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    input {
+      background-color: #333;
+      color: white;
+      box-sizing: border-box;
+    }
+
+    input::placeholder {
+      color: #aaa;
+    }
+
+    button {
+      background-color: #f44336;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+      margin-top: 25px;
+    }
+
+    button:hover {
+      background-color: #d32f2f;
+    }
+
+    .confirmado {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    .check {
+      font-size: 60px;
+      color: #4caf50;
+      margin-bottom: 20px;
+      animation: pop 0.4s ease;
+    }
+
+    footer {
+      background-color: #1d1d1d;
+      padding: 15px;
+      text-align: center;
+      width: 100%;
+      box-shadow: 0 -2px 10px rgba(0,0,0,0.5);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pop {
+      0% { transform: scale(0); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="historia.html">Planos</a>
+    <a href="sobre.html">Sobre Nós</a>
+    <a href="contato.html">Contato</a>
+  </nav>
+
+  <main>
+    <div class="pagamento-box" id="box">
+      <h1>Dados de Pagamento</h1>
+      <form id="form">
+        <input type="text" placeholder="Nome completo" required>
+        <input type="email" placeholder="E-mail" required>
+        <input type="text" placeholder="Número do cartão" required>
+        <input type="text" placeholder="Validade (MM/AA)" required>
+        <input type="text" placeholder="CVV" required>
+        <button type="submit">Finalizar Compra</button>
+      </form>
+
+      <div class="confirmado" id="confirmado">
+        <div class="check">✔</div>
+        <h2>Compra Confirmada!</h2>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy;2025 ALLDAY LAB</p>
+  </footer>
+
+  <script>
+    const form = document.getElementById('form');
+    const confirmado = document.getElementById('confirmado');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault(); // Impede envio real
+      form.style.display = 'none';
+      confirmado.style.display = 'flex';
+    });
+  </script>
+</body>
+</html>
